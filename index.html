@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SortViz - Interactive Sorting Visualizer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Toastify JS -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="nav-bar">
+        <div class="logo">
+            <h1>🎯 SortViz</h1>
+        </div>
+        <a href="#visual" class="nav-btn">Launch App</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Master Algorithms with Interactive Visualization</h1>
+            <p>Experience the beauty of sorting algorithms through stunning real-time visualizations. Watch as data
+                transforms from chaos to order, understanding each step of the sorting process with crystal clear
+                animations and insights.</p>
+            <a href="#visual" class="cta-button">Start Visualizing</a>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Unleash the Power of Visual Learning</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="icon">✨</span>
+                <h3>Stunning Visuals</h3>
+                <p>Observe algorithms in action with elegant and intuitive animations that bring complex processes to
+                    life.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">🚀</span>
+                <h3>Real-time Interaction</h3>
+                <p>Generate new arrays, adjust speed, and switch algorithms on the fly to deepen your understanding.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">📚</span>
+                <h3>Diverse Algorithms</h3>
+                <p>Explore a wide range of sorting algorithms, from basic Bubble Sort to advanced Quick Sort and Merge
+                    Sort.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon">💡</span>
+                <h3>Clear Insights</h3>
+                <p>Gain a clearer grasp of time and space complexity, and how different algorithms perform under various
+                    conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="visu">
+        <div class="feature">
+            <h2>🚀 Visualization Arena</h2>
+            <div class="result-container">
+                <!-- Time Complexity Card - Re-added as it's crucial for JS functionality -->
+                <div class="time-complexity-card">
+                    <h3>Time Complexity</h3>
+                    <p>Best Case: <span id="bestCaseComplexity">O(N)</span></p>
+                    <p>Average Case: <span id="averageCaseComplexity">O(N^2)</span></p>
+                    <p>Worst Case: <span id="worstCaseComplexity">O(N^2)</span></p>
+                    <p>Space Complexity: <span id="spaceComplexity">O(1)</span></p>
+                </div>
+                <div class="result" id="visual"></div>
+            </div>
+            <div class="functions">
+                <div class="array-size-input">
+                    <label for="arraySize">📏 Array Size</label>
+                    <input type="number" id="arraySize" value="50" min="10" max="200">
+                </div>
+                <button onclick="generateArray()">🎲 Generate Array</button>
+
+                <div class="speed-control">
+                    <label for="speed">⚡ slow</label>
+                    <input type="range" max="300" min="20" class="speed" id="speed">
+                </div>
+
+                <button onclick="stopSorting()" class="stop-btn">🛑 Stop</button>
+                <button onclick="resetArray()" class="reset-btn">↩️ Reset</button>
+
+                <button onclick="BubbleSort()">🫧 Bubble Sort</button>
+                <button onclick="SelectionSort()">🎯 Selection Sort</button>
+                <button onclick="InsertionSort()">📝 Insertion Sort</button>
+                <button onclick="MergeSort()">🔀 Merge Sort</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bottom">
+        <div class="footer-content">
+            <h2>🎯 SortViz</h2>
+            <p>Empowering developers and students to visualize and understand algorithms</p>
+            <p>All Rights Reserved © 2025 SortViz</p>
+
+
+        </div>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="app.js"></script>
+
+</html>
